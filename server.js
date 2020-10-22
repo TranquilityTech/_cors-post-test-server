@@ -16,5 +16,7 @@ app.post('/', async (req, res) => {
     res.json(req.body);
 });
 
-var post = 3000;
-app.listen(post);
+const port = process.env.PORT || '3000';
+app.set('port', port);
+const http = require('http');
+http.createServer(app).listen(port);

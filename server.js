@@ -15,3 +15,6 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
     res.json(req.body);
 });
+
+var post = 3000;
+app.listen(post)

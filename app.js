@@ -13,17 +13,6 @@ const cors = require("cors");
 // enable cors for everyone
 app.use(cors());
 
-const expressJwt = require('express-jwt');
-const jwt = require('jsonwebtoken');
-let tokenList = {};
-
-app.use(expressJwt({
-    secret: 'secret123456',
-    algorithms: ['HS256'] // https://stackoverflow.com/questions/39239051/rs256-vs-hs256-whats-the-difference
-}).unless({
-    path: ['/login']
-}))
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

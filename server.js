@@ -17,4 +17,4 @@ app.post('/', async (req, res) => {
 });
 
 var post = 3000;
-app.listen(post)
+app.listen(post);
